@@ -41,5 +41,19 @@ Key: postings sorted by docID
 加速方法:augment postings
 利用空間換時間
 多記 skip pointer (通常取sqrt(L))
-
 ```
+
+##  More Complicated Queries
+### Phrase Quries
+* ex: "stanford university", 希望搜尋的是那間史丹佛大學, 而非位於史丹佛的一間大學
+* biword index
+    * For example the text “Friends, Romans, Countrymen” would generate the biwords
+    -friends romans
+    -romans countrymen
+    * issue
+        *單字更長更複雜該怎麼辦 ?
+        *storage concern
+* positional index
+    * 記住 term 出現在哪一頁哪一位置
+    * 所有 query 都可以支援 但需花時間檢查
+    * 以時間換空間
