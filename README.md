@@ -1,5 +1,5 @@
 ## Information Retrieval
-*Instructor
+* Instructor
 
 [范耀中](http://yfan.nlpnchu.org/)
 
