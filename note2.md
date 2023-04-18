@@ -79,3 +79,21 @@ Uncompressed indexes might be large
 ```
 ##
 * fixed-width terms are wasteful
+    * 假設每個單字固定 20 bytes 來存
+    * frequency 也用 4 個 bytes 來存
+    * 指標 (指向 postings list) 也用 4 個 bytes 來存
+    * 假設有 40 萬個單字, 那麼我們共需要 M * (20 + 4 + 4) = 400,000 * 28 = 11.2 MB 來存下這整個 dictionary
+
+* Dictionary as a string
+    * store dictionary as a long string characters
+    * 假設40萬個單字
+    * Freq 4 bytes
+    * pointer to Postings 4 bytes
+    * pointer 3 bytes
+    * 400K terms x 19 ->7.6 MB (against 11.2MB
+    for fixed width)
+```
+    40萬個字平均單字8個字=3.2MB
+    3,200,000個位置 取LOG可知指標(pointer用來記得起始點, 區隔哪裡到哪裡是某個單字)需幾bit
+    約3個bytes
+``` 
