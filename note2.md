@@ -7,6 +7,7 @@ Tolerant Retrieval
     -Misspelled Correction
 Dictionary Compression
 ```
+##
 * Some IR systems use
     * hashes O(1)
         * No prefix search
