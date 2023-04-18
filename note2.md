@@ -45,16 +45,27 @@ Context sensitive
 * When 
     quite rare or not at all the dictionary
 * Apporach
+
     1 找相似的
+
     2 計算相似度
+
     3 選擇頻率最高的字
 * method
     1 Edit distance (Levenshtein distance)
+
         * O((m * n) * M)
+
     2 weighted edit distance
+
     3 k-gram overlap
+
         * O((m + n) * M)
     * 避免太長的單字 而相似高 
+
         -> **Jaccard coefficient**
+
             * 交集 / 聯集
+
             * always assigns a number between 0 and 1
+            
