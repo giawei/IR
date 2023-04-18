@@ -65,3 +65,17 @@ Context sensitive
         * 交集 / 聯集
         * always assigns a number between 0 and 1
 
+## Dictionary Compression
+* Problem
+```
+Uncompressed indexes might be large
+```
+* Vocablary Size ?
+    * Heaps' Law
+```
+    estimating the number of terms
+    M = k(T)^b 
+    M : vocabulary size ; T : collection size ; k, b : constant
+```
+##
+* fixed-width terms are wasteful
