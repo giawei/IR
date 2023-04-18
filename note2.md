@@ -21,11 +21,13 @@ Dictionary Compression
 * mon*
 
     -easy
+
     -retrieve mon <= w < moo
 
 * *mon
 
     -harder
+
     -retrieve nom <= w < non
 
 ### Bigram(k-gram) index
@@ -34,7 +36,8 @@ Dictionary Compression
 ```
 Google wildcard used in whole words, not parts of words
 ☆Google has very limited support for wildcard queries
-WHY? -> 效率問題
+WHY? 
+-> 效率問題
 ```
 
 ## Spell correction
