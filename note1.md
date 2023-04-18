@@ -17,12 +17,29 @@
     -Identify each doc by a docID, a document serial number
 ## Initial stages of text processing
 * Tokenization
+
     -Cut character sequence into word tokens
+    會有語言問題 ex:日文和中文字和字之間沒有空格
 * Normalization
+
     -Map text and query term to same form
     * U.S.A. and USA
 * Stemming
+
     -We may wish different forms of a root to match
     * authorize, authorization
 * Stop words
     * the, a, to, of
+* inverted index
+    * dictionary + postings (frequency is also added)
+
+* query processing 'AND'
+    * intersection
+    * merge : O(x+y)
+```
+Key: postings sorted by docID
+加速方法:augment postings
+利用空間換時間
+多記 skip pointer (通常取sqrt(L))
+
+```
