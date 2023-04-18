@@ -103,3 +103,7 @@ Uncompressed indexes might be large
     3,200,000個位置 取LOG可知指標(pointer用來記得起始點, 區隔哪裡到哪裡是某個單字)需幾bit
     約3個bytes
 ``` 
+## Postings compression
+* 比起 dictionary, postings 大很多
+* 假設有 80 萬篇文章, 那麼一個 docID 需要的大小就是 80 萬取 log, 約為 20 bits
+* 因此改採用的方式 : 不直接存文章的 ID, 而是存它們的 gap, 來降低編碼的數字
