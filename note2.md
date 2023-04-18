@@ -19,9 +19,12 @@ Dictionary Compression
 
 ### Wild-card queries
 * mon*
+
     -easy
     -retrieve mon <= w < moo
+
 * *mon
+
     -harder
     -retrieve nom <= w < non
 
